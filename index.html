@@ -3,133 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>MK Decor</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-background:
-linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)),
-url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-color:white;
-overflow-x:hidden;
+    background:
+    linear-gradient(
+        135deg,
+        #0f0f0f 0%,
+        #1a120d 35%,
+        #111111 100%
+    );
+    color:white;
+    overflow-x:hidden;
+    position:relative;
 }
 
-/* HERO */
+/* GOLD LINES */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    repeating-linear-gradient(
+        130deg,
+        transparent 0px,
+        transparent 180px,
+        rgba(212,175,55,0.08) 182px,
+        rgba(212,175,55,0.18) 184px,
+        transparent 186px,
+        transparent 360px
+    );
+    pointer-events:none;
+    z-index:0;
+}
+
+/* SOFT GLOW */
+
+body::after{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(212,175,55,0.10),
+        transparent 40%
+    );
+    pointer-events:none;
+    z-index:0;
+}
 
 header{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    z-index:1;
+    padding:20px;
 }
 
 header h1{
-font-size:72px;
-margin-bottom:20px;
-letter-spacing:2px;
-text-shadow:0 0 25px rgba(212,175,55,0.35);
+    font-size:80px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 header p{
-font-size:24px;
-color:#e0d3b8;
-margin-bottom:35px;
+    font-size:28px;
+    color:#d4af37;
+    margin-bottom:30px;
 }
 
 .btn{
-display:inline-block;
-padding:16px 38px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-background:linear-gradient(135deg,#d4af37,#f3d27a);
-color:#111;
-transition:0.3s;
-box-shadow:0 0 25px rgba(212,175,55,0.35);
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:#d4af37;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 40px rgba(212,175,55,0.55);
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 
-/* PRODUCTS */
-
 .products{
-padding:80px 8%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    padding:80px 40px;
+    position:relative;
+    z-index:1;
 }
 
 .card{
-background:rgba(25,25,25,0.82);
-border:1px solid rgba(212,175,55,0.18);
-border-radius:22px;
-overflow:hidden;
-backdrop-filter:blur(8px);
-transition:0.3s;
-box-shadow:0 0 20px rgba(0,0,0,0.35);
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(212,175,55,0.2);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(8px);
+    transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 35px rgba(212,175,55,0.18);
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(212,175,55,0.2);
 }
 
 .card img{
-width:100%;
-height:320px;
-object-fit:cover;
-display:block;
-}
-
-.card-content{
-padding:22px;
+    width:100%;
+    height:320px;
+    object-fit:cover;
 }
 
 .card h2{
-font-size:24px;
-margin-bottom:12px;
+    padding:20px 20px 10px;
+    font-size:24px;
 }
 
 .price{
-color:#d4af37;
-font-size:22px;
-font-weight:bold;
-margin-bottom:12px;
+    padding:0 20px 25px;
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
 }
 
-/* WHATSAPP */
-
 .whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:14px 22px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 0 20px rgba(0,0,0,0.3);
-z-index:1000;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 25px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    z-index:10;
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:50px;
+}
+
+header p{
+    font-size:20px;
+}
+
 }
 
 </style>
@@ -138,50 +182,56 @@ z-index:1000;
 <body>
 
 <header>
-<h1>MK Decor</h1>
-<p>Luxury Handmade Decor • Handcrafted in Germany</p>
+    <h1>MK Decor</h1>
+    <p>Luxury Handmade Decor • Handcrafted in Germany</p>
 
-<a href="#products" class="btn">
-Explore Collection
-</a>
+    <a href="#products" class="btn">
+        Explore Collection
+    </a>
 </header>
 
 <section class="products" id="products">
 
-<div class="card">
-<img src="https://i.imgur.com/bnw3jVW.jpeg" alt="Vase">
+    <div class="card">
+        <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Vase">
+        <h2>Wave Vase</h2>
+        <div class="price">29€</div>
+    </div>
 
-<div class="card-content">
-<h2>Wave Vase</h2>
-<div class="price">19€</div>
-<p>Elegant handmade decorative vase with luxury finish.</p>
-</div>
-</div>
+    <div class="card">
+        <img src="https://i.imgur.com/jNNT4LE.jpg" alt="Vase">
+        <h2>Modern Wood Vase</h2>
+        <div class="price">34€</div>
+    </div>
 
-<div class="card">
-<img src="https://i.imgur.com/imKT5pl.jpeg" alt="Vase">
+    <div class="card">
+        <img src="https://i.imgur.com/2DsA49b.jpg" alt="Vase">
+        <h2>Luxury Decor Vase</h2>
+        <div class="price">39€</div>
+    </div>
 
-<div class="card-content">
-<h2>Modern Wood Vase</h2>
-<div class="price">24€</div>
-<p>Minimal luxury style inspired by natural wood textures.</p>
-</div>
-</div>
+    <div class="card">
+        <img src="https://i.imgur.com/3ZQ3Z6v.jpg" alt="Vase">
+        <h2>Elegant Wood Art</h2>
+        <div class="price">32€</div>
+    </div>
 
-<div class="card">
-<img src="https://i.imgur.com/6GQYQ9x.jpeg" alt="Vase">
+    <div class="card">
+        <img src="https://i.imgur.com/fHyEMsl.jpg" alt="Vase">
+        <h2>Minimal Gold Vase</h2>
+        <div class="price">27€</div>
+    </div>
 
-<div class="card-content">
-<h2>Luxury Decor Vase</h2>
-<div class="price">29€</div>
-<p>Premium decorative piece for modern interiors.</p>
-</div>
-</div>
+    <div class="card">
+        <img src="https://i.imgur.com/ZXBtVw7.jpg" alt="Vase">
+        <h2>Handmade Luxury Piece</h2>
+        <div class="price">42€</div>
+    </div>
 
 </section>
 
 <a class="whatsapp" href="https://wa.me/49123456789">
-WhatsApp
+    WhatsApp
 </a>
 
 </body>
