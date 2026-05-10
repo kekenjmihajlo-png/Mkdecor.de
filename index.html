@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MK Decor</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MK Decor</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family:Arial;
-      background:#0f0f0f;
-      color:white;
-      text-align:center;
-      padding:60px;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-    h1{
-      font-size:60px;
-      margin-bottom:10px;
-    }
+body{
+background:#0f0f0f;
+color:white;
+}
 
-    p{
-      color:#bdbdbd;
-      font-size:20px;
-    }
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(to bottom,#111,#000);
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:30px;
-      padding:15px 35px;
-      background:white;
-      color:black;
-      text-decoration:none;
-      border-radius:15px;
-      font-weight:bold;
-    }
-  </style>
-</head>
+header h1{
+font-size:70px;
+margin-bottom:20px;
+}
 
-<body>
-  <h1>MK Decor</h1>
+header p{
+font-size:22px;
+color:#ccc;
+margin-bottom:30px;
+}
 
-  <p>
-    Luxury Handmade Decor • Handcrafted in Germany
-  </p>
+.btn{
+padding:15px 35px;
+background:white;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
 
-  <a class="btn" href="#">
-    Contact
-  </a>
-</body>
-</html>
+.btn:hover{
+background:#d4af37;
+color:white;
+}
