@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MK Decor</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -47,6 +48,7 @@ color:black;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+display:inline-block;
 transition:0.3s;
 }
 
@@ -54,3 +56,163 @@ transition:0.3s;
 background:#d4af37;
 color:white;
 }
+
+.products{
+padding:80px 30px;
+max-width:1200px;
+margin:auto;
+}
+
+.products h2{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#181818;
+border-radius:20px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.card-content p{
+color:#bbb;
+margin-bottom:15px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#d4af37;
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+background:#090909;
+margin-top:60px;
+}
+
+footer p{
+color:#999;
+margin-top:10px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>MK Decor</h1>
+
+<p>
+Luxury Handmade Decor • Handcrafted in Germany
+</p>
+
+<a class="btn" href="#">
+Contact Us
+</a>
+
+</header>
+
+<section class="products">
+
+<h2>Our Collection</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1616627457329-a4fba6f94b4d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Luxury Vase</h3>
+<p>Elegant handmade modern vase.</p>
+<div class="price">15€</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Modern Decor</h3>
+<p>Premium aesthetic decoration.</p>
+<div class="price">15€</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h3>Handcrafted Piece</h3>
+<p>Minimal luxury interior style.</p>
+<div class="price">15€</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>MK Decor</h2>
+
+<p>
+Made with passion in Germany
+</p>
+
+</footer>
+
+<a class="whatsapp" href="#">
+WhatsApp
+</a>
+
+</body>
+</html>
