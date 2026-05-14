@@ -164,57 +164,144 @@ header p{
 </head>
 
 <body>
-    <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
+    
+<!-- HERO SECTION START -->
 
-  {/* Background */}
-  <div className="absolute inset-0">
-    <img
-      src="/japandi-bg.png"
-      alt="Luxury Interior"
-      className="w-full h-full object-cover scale-105"
-    />
-    <div className="absolute inset-0 bg-black/55"></div>
-  </div>
+<section class="hero">
 
-  {/* Content */}
-  <div className="relative z-10 text-center px-6 max-w-4xl">
+  <div class="overlay"></div>
 
-    <p className="uppercase tracking-[0.35em] text-neutral-300 text-sm mb-5">
-      MK Decor
-    </p>
+  <div class="hero-content">
 
-    <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-      Handmade Modern Decor
-      <span className="block text-[#d6b36a]">
-        for Elegant Spaces
-      </span>
+    <p class="brand-top">MK Decor</p>
+
+    <h1>
+      Handgefertigte moderne Dekoration
+      <span>für elegante Räume</span>
     </h1>
 
-    <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-      Minimalist handmade pieces designed to bring warmth,
-      elegance and modern aesthetics into your home.
+    <p class="hero-text">
+      Minimalistische handgefertigte Designs für ein stilvolles und modernes Zuhause.
     </p>
 
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-      <a
-        href="#products"
-        className="px-8 py-4 rounded-full bg-[#d6b36a] text-black font-semibold text-lg hover:scale-105 transition duration-300"
-      >
-        Explore Collection
-      </a>
-
-      <a
-        href="https://wa.me/"
-        className="px-8 py-4 rounded-full border border-white/30 backdrop-blur-md bg-white/10 text-white font-semibold text-lg hover:bg-white hover:text-black transition duration-300"
-      >
-        Contact Us
-      </a>
-
+    <div class="hero-buttons">
+      <a href="#products" class="btn-gold">Kollektion entdecken</a>
+      <a href="https://wa.me/49123456789" class="btn-outline">Kontakt</a>
     </div>
+
   </div>
+
 </section>
 
+<style>
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('japandi-bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.brand-top {
+  color: #d4b06a;
+  letter-spacing: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 64px;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  display: block;
+  color: #d4b06a;
+}
+
+.hero-text {
+  color: #e0e0e0;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-gold {
+  background: #d4b06a;
+  color: black;
+  padding: 16px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 16px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+
+}
+
+</style>
+
+<!-- HERO SECTION END -->
 <header>
     <h1>MK Decor</h1>
     <p>Luxury Handmade Decor • Handcrafted in Germany</p>
