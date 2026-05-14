@@ -164,6 +164,56 @@ header p{
 </head>
 
 <body>
+    <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
+
+  {/* Background */}
+  <div className="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop"
+      alt="Luxury Interior"
+      className="w-full h-full object-cover scale-105"
+    />
+    <div className="absolute inset-0 bg-black/55"></div>
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-6 max-w-4xl">
+
+    <p className="uppercase tracking-[0.35em] text-neutral-300 text-sm mb-5">
+      MK Decor
+    </p>
+
+    <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+      Handmade Modern Decor
+      <span className="block text-[#d6b36a]">
+        for Elegant Spaces
+      </span>
+    </h1>
+
+    <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      Minimalist handmade pieces designed to bring warmth,
+      elegance and modern aesthetics into your home.
+    </p>
+
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+      <a
+        href="#products"
+        className="px-8 py-4 rounded-full bg-[#d6b36a] text-black font-semibold text-lg hover:scale-105 transition duration-300"
+      >
+        Explore Collection
+      </a>
+
+      <a
+        href="https://wa.me/"
+        className="px-8 py-4 rounded-full border border-white/30 backdrop-blur-md bg-white/10 text-white font-semibold text-lg hover:bg-white hover:text-black transition duration-300"
+      >
+        Contact Us
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <header>
     <h1>MK Decor</h1>
